@@ -44,6 +44,8 @@
 
 <?php
 
+ini_set('post_max_size', '200M');
+ini_set('upload_max_filesize', '200M');
 if ($handle = opendir('./')) {
 
     while (false !== ($entry = readdir($handle))) {
