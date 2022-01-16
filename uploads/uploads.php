@@ -52,7 +52,10 @@ if ($handle = opendir('./')) {
 
         if ($entry != "." && $entry != "..") {
 
-            echo '<br>', "<a href=\"./$entry\">$entry</a>", '<br>';
+            $entryurl = urlencode($entry);
+            $entryurl = str_replace('.', '%2E', $entryurl);
+            $entryurl = str_replace('-', '%2D', $entryurl);
+            echo '<br>', "<a href=\"./$entryurl\">$entry</a>", '<br>';
         }
     }
 
