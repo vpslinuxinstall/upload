@@ -52,10 +52,20 @@ if ($handle = opendir('./')) {
 
         if ($entry != "." && $entry != "..") {
 
-//             $entryurl = urlencode($entry);
-//             $entryurl = str_replace('.', '%2E', $entryurl);
-//             $entryurl = str_replace('-', '%2D', $entryurl);
-            echo '<br>', "<a href=\"./$entry\">$entry</a>", '<br>';
+          if (strpos($entry, '#') !== false) {
+            $entryurl = urlencode($entry);
+            $entryurl = str_replace('#', '%23', $entryurl);
+            echo '<br>', "<a href=\"./$entryurl\">$entry</a>", '<br>';
+            } else {
+              echo '<br>', "<a href=\"./$entry\">$entry</a>", '<br>';
+            }
+          // if (str_contains($entry, '#')){
+          //   $entryurl = urlencode($entry);
+          //   $entryurl = str_replace('#', '%23', $entryurl);
+          //   echo '<br>', "<a href=\"./$entryurl\">$entry</a>", '<br>';
+          //   } else {
+          //     echo '<br>', "<a href=\"./$entry\">$entry</a>", '<br>';
+          //   }
         }
     }
 
