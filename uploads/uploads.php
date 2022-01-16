@@ -55,6 +55,7 @@ if ($handle = opendir('./')) {
           if (strpos($entry, '#') !== false) {
             $entryurl = urlencode($entry);
             $entryurl = str_replace('#', '%23', $entryurl);
+            $entryurl = str_replace('+', ' ', $entryurl);
             echo '<br>', "<a href=\"./$entryurl\">$entry</a>", '<br>';
             } else {
               echo '<br>', "<a href=\"./$entry\">$entry</a>", '<br>';
