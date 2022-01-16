@@ -1,12 +1,10 @@
-// <?php 
+<?php 
 //   $mydir = './'; 
 //   
 //   $myfiles = array_diff(scandir($mydir), array('.', '..')); 
 //   
 //   print_r($myfiles); 
-// ?> 
 
-// <?php
 // 
 // $fileList = glob('./*');
 // foreach($fileList as $filename){
@@ -14,9 +12,7 @@
 //         echo $filename, '<br>'; 
 //     }   
 // }
-// ?>
 
-// <?php
 // 
 // $fileList = glob('./*');
 // foreach($fileList as $filename){
@@ -24,10 +20,8 @@
 //         echo '<br>', $filename, '<br>'; 
 //     }   
 // }
-// ?>
 
-// <?php
-// 
+
 // if ($handle = opendir('./')) {
 // 
 //     while (false !== ($entry = readdir($handle))) {
@@ -40,12 +34,8 @@
 // 
 //     closedir($handle);
 // }
-// ?>
 
-<?php
 
-ini_set('post_max_size', '200M');
-ini_set('upload_max_filesize', '200M');
 if ($handle = opendir('./')) {
 
     while (false !== ($entry = readdir($handle))) {
@@ -73,3 +63,62 @@ if ($handle = opendir('./')) {
     closedir($handle);
 }
 ?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+contain link 
+listing files in folder showing index.php
+https://stackoverflow.com/questions/15555771/listing-files-in-folder-showing-index-php/15555904 
+-->
+
+<!-- 
+// <?php
+//     if ($handle = opendir('.')) {
+//     while (false !== ($file = readdir($handle)))
+//     {
+//         if ($file != "." && $file != "..")
+//         {
+//             $thelist .= '<LI><a href="'.$file.'">'.$file.'</a>';
+//         }
+//     }
+//     closedir($handle);
+//     }
+// ?>
+
+// <P>Dir:</p>
+// <UL>
+// <P><?=$thelist?></p>
+// </UL> 
+-->
