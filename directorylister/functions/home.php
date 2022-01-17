@@ -14,7 +14,6 @@
 	}
 	
 	$i = 0;
-
 	//获取目录
 	$dir = $_GET['dir'];
 	$dir = con_coding($dir,FALSE);
@@ -43,7 +42,6 @@
 	}
 	//分割字符串
 	$navigation = explode("/",$dir);
-
 	if(($dir == '') || (!isset($dir))) {
 		$listdir = scandir($thedir);
 		$readme = $thedir.'/README.md';
@@ -113,14 +111,11 @@
 	}
 	#echo updir($dir);
 	$updir = updir($dir);
-
 ?>
 <?php
 	//载入页头
 	include_once("./template/header.php")
 ?>
-
-
 				
 				<br>
         <div class="layui-col-lg12">
@@ -149,8 +144,22 @@
 					if( is_file($readme_dir.'/readme.md') || (is_file($readme_dir.'/README.md')) )	{	
 					$readme = con_coding($readme);
 				?>
+				<!-- 
+        <div class="layui-col-lg12" style = "margin-top:1em;">
+					<div class="layui-collapse">
+					  <div class="layui-colla-item">
+					    <h2 class="layui-colla-title">使用说明（必看）</h2>
+					    <div class="layui-colla-content">
+						    <iframe src="<?php echo './?c=readme&file='.$readme; ?>" width="100%" height="600px" name="" frameborder = "0" align="middle"></iframe>
+					    </div>
+					  </div>
+					</div>
+				</div>
+				<?php } ?>
+        -->
+				<!--使用说明END-->
 
-				
+
 			</div>
 		</div>
 	</div>
@@ -192,7 +201,6 @@
 						    //获取文件修改时间
 						    $ctime = filemtime($fullpath);
 						    $ctime = date("Y-m-d H:i",$ctime);
-
 						    //搜索忽略的目录，如果包含.php 一并排除
 						    if( strripos($showdir,".php") ) {
 							    continue;
@@ -220,11 +228,9 @@
 						    	$suffix = end($suffix);
 						    	
 							    $url = '.'.$dir.'/'.$showdir;
-
 							    //根据不同后缀显示不同图标
 							    $ico = $zdir->ico($suffix);
 							    
-
 							    //获取文件大小
 							    $fsize = filesize($fullpath);
 							    $fsize = ceil ($fsize / 1024);
@@ -272,7 +278,6 @@
 							    ?>
 							    <!--判断文件是否是图片-->
 							    <?php if(($suffix == 'jpg') || ($suffix == 'jpeg') || ($suffix == 'png') || ($suffix == 'gif') || ($suffix == 'bmp')){
-
 							   	?>
 							   	<a class = "fname1" href="<?php echo $url ?>" id = "url<?php echo $i; ?>" onmouseover = "showimg(<?php echo $i; ?>,'<?php echo $url; ?>')" onmouseout = "hideimg(<?php echo $i; ?>)"><i class="<?php echo $ico; ?>"></i> <?php echo $showdir; ?></a>
 							   	<div class = "showimg" id = "show<?php echo $i; ?>"><img src="" id = "imgid<?php echo $i; ?>"></div>
