@@ -62,7 +62,7 @@ function copy(url){
             return url;
         },
         afterCopy: function() {
-			layer.msg('链接已复制！');
+			layer.msg('Link copied to the clipboard');
         }
     });
 }
