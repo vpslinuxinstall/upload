@@ -17,7 +17,7 @@
 
 	//获取目录
 	$dir = $_GET['dir'];
-	// $dir = con_coding($dir,FALSE);
+	$dir = con_coding($dir,FALSE);
 	$dir = strip_tags($dir);
 	$dir = str_replace("\\","/",$dir);
 	$rel_path = $thedir."/".$dir;
