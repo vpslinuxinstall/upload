@@ -173,7 +173,7 @@
 					      <th>Name</th>
 					      <th class = "layui-hide-xs"></th>
 					      <th class = "layui-hide-xs">Date</th>
-					      <th>size</th>
+					      <th>Size</th>
 					      <th class = "layui-hide-xs layui-hide-sm layui-show-md-block">Action</th>
 					    </tr> 
 					  </thead>
