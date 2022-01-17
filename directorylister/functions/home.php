@@ -119,20 +119,9 @@
 	//载入页头
 	include_once("./template/header.php")
 ?>
-    <!--面包屑导航-->
-	<!--
-  <div id="navigation" class = "layui-hide-xs">
-		<div class="layui-container">
-			<div class="layui-row">
-      -->
-				<!--滚动消息-->
-				<!--
-        <div id = "msg" class="layui-col-lg12">
-					<i class="layui-icon layui-icon-notice" style="color: #FF5722;font-weight:bold;"></i> 
-					<span id = "msg-content"></span>
-				</div>
-        -->
-				<!--滚动消息END-->
+
+
+				
 				<br>
         <div class="layui-col-lg12">
 					<p>
