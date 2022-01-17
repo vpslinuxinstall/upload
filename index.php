@@ -1,4 +1,3 @@
-<?php ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,7 +15,12 @@
         <input type="file" name="files[]" multiple>
         <input type="submit" value="Upload File" name="submit">
     </form>
-    <a href="./uploads/uploads.php" >upload content page</a>
+    <br>
+    <!--
+    <a href="./uploadphp/uploads.php" >upload content page</a> 
+    --> 
+    <a href="./directorylister/index.php" >upload content page</a> 
+
 
 	<script src="upload.js"></script>
 </body>
