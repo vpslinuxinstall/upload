@@ -4,7 +4,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (isset($_FILES['files'])) {
         $errors = [];
         // $path = 'uploads/';
-        $path = 'directorylister/';
+        // $path = 'directorylister/';
+        $path = "./";
 // 	$extensions = ['jpg', 'jpeg', 'png', 'gif'. 'zip', 'pdf'];
 		
         $all_files = count($_FILES['files']['tmp_name']);
