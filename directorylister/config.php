@@ -23,7 +23,8 @@
 		"template",
 		"cache.php",
 		"indexes.php",
-		"zdir"
+		"zdir",
+		".htaccess.bak"
 	);
 	//设置参数
 	$config = array(
